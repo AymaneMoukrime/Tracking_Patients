@@ -2,7 +2,8 @@
 ## Overview 
 This project is a microservices-based application for tracking patients in a hospital. It includes services for managing doctors and patients, real-time tracking of patients, and alerting when patients go beyond a safe zone.
 ## Software architecture
-<img width="833" alt="image" src="https://github.com/user-attachments/assets/1d694f56-11cf-4d7a-a4d6-8933293da1ec" />
+<img width="692" alt="image" src="https://github.com/user-attachments/assets/0716fba9-bc45-46f2-93d9-771eccb4a1ed" />
+
 
 The system consists of the following microservices: 
 

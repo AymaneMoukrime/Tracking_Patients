@@ -4,7 +4,8 @@ from datetime import datetime
 import time
 
 # Base API URL for Spring Boot
-API_URL = "http://localhost:8080/api"
+API_URL_PATIENT="http://localhost:8888"
+API_URL = "http://localhost:8888/SERVICE-TRACKING"
 
 # Sample patients to register with safe zones mapped to rooms
 patients = [
@@ -46,7 +47,7 @@ patients = [
 def register_patients():
     registered_patients = []
     for patient in patients:
-        response = requests.post(f"{API_URL}/patients", json=patient)
+        response = requests.post(f"{API_URL_PATIENT}/SERVICE-PATIENT/patients", json=patient)
         if response.status_code == 200:
             registered_patient = response.json()
             print(f"Registered patient: {registered_patient}")
@@ -65,7 +66,7 @@ def initialize_locations(registered_patients):
             "longitude": patient["safeZoneLongitude"],
             "timestamp": datetime.now().isoformat()
         }
-        response = requests.post(f"{API_URL}/locations", json=location)
+        response = requests.post(f"{API_URL}/api/locations", json=location)
         if response.status_code == 200:
             print(f"Initialized location for patient {patient['id']}: {location}")
         else:
@@ -83,7 +84,7 @@ def send_location_updates(registered_patients):
                 "longitude": patient["safeZoneLongitude"] + lon_change,
                 "timestamp": datetime.now().isoformat()
             }
-            response = requests.put(f"{API_URL}/locations/{patient['id']}", json=location)
+            response = requests.put(f"{API_URL}/api/locations/{patient['id']}", json=location)
             if response.status_code == 200:
                 print(f"Updated location for patient {patient['id']}: {location}")
             else:

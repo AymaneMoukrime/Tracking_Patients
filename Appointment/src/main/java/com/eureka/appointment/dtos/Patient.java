@@ -3,8 +3,7 @@ package com.eureka.appointment.dtos;
 public class Patient {
     private Long id;
     private String name;
-    private String diagnosis;
-    private String location;
+    private String condition;
 
     public Long getId() {
         return id;
@@ -22,19 +21,12 @@ public class Patient {
         this.name = name;
     }
 
-    public String getDiagnosis() {
-        return diagnosis;
+
+    public String getCondition() {
+        return condition;
     }
 
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 }

@@ -2,24 +2,28 @@
 .patient-tracker {
     display: flex;
     flex: 1;
+    font-family: 'Poppins', sans-serif;
 }
 
 aside {
     width: 25%;
     background: #ffffff;
     padding: 20px;
-    border-right: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #dfe5ea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     box-sizing: border-box; /* Ensures padding is included in the width */
+    border-radius: 12px;
 }
 
 main {
     flex: 1;
     padding: 20px;
-    background: #f3f4f6;
+    background: #f9fafa;
     overflow-y: auto;
     box-sizing: border-box; /* Ensures padding is included in the width */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 ul {
@@ -31,16 +35,30 @@ ul {
 li {
     margin: 10px 0;
     padding: 15px;
-    background: linear-gradient(135deg, #f1f1f1, #e1e1e1);
-    cursor: pointer;
+    background: #ffffff;
     border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #dfe5ea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 li:hover {
-    background: linear-gradient(135deg, #e1e1e1, #f1f1f1);
+    background: #f1f3f5; /* Light hover effect */
     transform: translateY(-2px);
+}
+
+.selected {
+    background: #f1f3f5; /* Highlight selected patient */
+    border-color: #50b3a2; /* Border color for selected item */
+}
+
+li svg {
+    font-size: 20px;  /* Icon size */
+    color: #50b3a2;   /* Icon color */
+    margin-right: 10px;  /* Space between icon and name */
 }
 
 .alert-popup {
@@ -48,18 +66,18 @@ li:hover {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    background: linear-gradient(135deg, #ec2b00, #ca1414); /* Updated gradient */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: slide-down 0.5s ease-out;
 }
 
 .alert-popup button {
     background-color: white;
-    color: #ff4b2b;
+    color: #f00505; /* Button color to match theme */
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -70,7 +88,7 @@ li:hover {
 }
 
 .alert-popup button:hover {
-    background-color: lightgray;
+    background-color: #f1f3f5; /* Light background on hover */
 }
 
 @keyframes slide-down {

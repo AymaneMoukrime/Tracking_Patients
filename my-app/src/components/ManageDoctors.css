@@ -1,0 +1,194 @@
+/* General Layout */
+.manage-doctors {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #374151;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+/* Doctor List */
+.doctor-list {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-list h2 {
+    color: #374151;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e0e4e8;
+    padding-bottom: 8px;
+}
+
+.doctor-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.doctor-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background: #f9fafa;
+    border: 1px solid #dfe5ea;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.doctor-list li:hover {
+    background-color: #f1f3f5;
+}
+
+.doctor-info div {
+    font-size: 1rem;
+}
+
+.doctor-info strong {
+    font-weight: bold;
+}
+
+/* Doctor Icon */
+.doctor-name-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and name */
+}
+
+.doctor-icon {
+    font-size: 1.6rem;
+    color: #50b3a2; /* Icon color */
+}
+
+/* Button container to align buttons next to each other */
+.button-container {
+    display: flex;
+    gap: 8px;  /* Adds space between the buttons */
+}
+
+/* Edit and Delete Buttons */
+.edit-btn,
+.delete-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #50b3a2;
+    color: white;
+    border: none;
+}
+
+.edit-btn:hover {
+    background-color: #3d9384;
+}
+
+.delete-btn {
+    background-color: #ef5350;
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* Add Doctor Section */
+.add-doctor {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9fafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-doctor h2 {
+    color: #374151;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.add-doctor form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-doctor input {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #dfe5ea;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.add-doctor button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #50b3a2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-doctor button:hover {
+    background-color: #3d9384;
+}
+
+/* Cancel Button Styles */
+.add-doctor .cancel-btn {
+    background-color: #f44336; /* Red background for cancel button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;  /* Add margin-top to separate from the form */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-doctor .cancel-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.add-doctor .cancel-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Error Message */
+.error-message {
+    color: #ef5350;
+    font-weight: bold;
+}
+
+/* No Data Message */
+.no-data {
+    color: #999;
+    font-size: 1rem;
+    text-align: center;
+}

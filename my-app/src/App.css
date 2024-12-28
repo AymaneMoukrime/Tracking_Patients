@@ -1,28 +1,207 @@
-/* App.css */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f0f0f5;
+    color: #333;
+    overflow-x: hidden;
 }
 
+/* Main App Container */
 .app-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
 }
 
-.content {
+/* Header */
+header {
     display: flex;
-    flex: 1;
-    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #50b3a2;
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* Header Animation: Slide from the top */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 25px;
+    animation: fadeInUp 1.2s ease-out 0.5s;
+}
+
+/* Navigation List Items */
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+    /* Adding a subtle shadow effect */
+}
+
+/* Link Style */
+nav ul li a {
+    text-decoration: none;
+    color: #50b3a2; /* Original link color */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect on Links */
+nav ul li:hover a {
+    color: #0056b3; /* Hovered link color */
+    transform: scale(1.1) translateY(-3px); /* Slight move upwards */
+    animation: linkBounce 0.5s ease-out; /* Added a bounce effect */
+}
+
+/* Bounce Animation for Links */
+@keyframes linkBounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover Effects on Navigation List Items */
+nav ul li:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1); /* Adds a subtle brightness effect */
+}
+
+/* Subtle Shake Animation on Active Link */
+nav ul li a.active {
+    animation: shakeLink 0.3s ease-in-out;
+}
+
+/* Shake Animation */
+@keyframes shakeLink {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Remove Underline on Hover for Links */
+nav ul li a::after {
+    content: none; /* Remove the underline */
+}
+
+/* Page Content Styling */
+.content {
+    padding: 40px;
+    background-color: #ffffff;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Content fade-in animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Animation */
+.add-btn:hover {
+    background-color: #45a088;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    animation: pulseEffect 1s infinite alternate;
+}
+
+/* Pulse Animation on Button Hover */
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Adding a subtle shadow effect on hover for links */
+nav ul li:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    .content {
+        padding: 20px;
+    }
 }

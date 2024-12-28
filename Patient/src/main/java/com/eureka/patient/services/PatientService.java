@@ -53,9 +53,6 @@ public class PatientService {
     }
 
     public void deletePatient(Long id) {
-        if (!patientRepository.existsById(id)) {
-            throw new RuntimeException("Patient not found");
-        }
         patientRepository.deleteById(id);
     }
 }

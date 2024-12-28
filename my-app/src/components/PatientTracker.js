@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FaUser } from 'react-icons/fa'; // Import the user icon
 import MapComponent from './MapComponent1';
 import './PatientTracker.css';
 
@@ -60,7 +61,6 @@ const PatientTracker = () => {
                         }
                     } catch (error) {
                         console.error("Error parsing WebSocket message:", error);
-                        console.log("Received raw WebSocket message:", event.data); // Log raw message for debugging
                     }
                 };
 
@@ -105,6 +105,7 @@ const PatientTracker = () => {
                             className={selectedPatient?.id === patient.id ? "selected" : ""}
                             style={{ color: locations[patient.id]?.alert ? 'red' : 'black' }}
                         >
+                            <FaUser style={{ marginRight: '8px' }} /> {/* Icon beside the patient's name */}
                             {patient.name}
                         </li>
                     ))}
@@ -114,7 +115,6 @@ const PatientTracker = () => {
                 {selectedPatient ? (
                     <div>
                         <h2>{selectedPatient.name}</h2>
-                        <p>Age: {selectedPatient.age}</p>
                         <p>Condition: {selectedPatient.condition}</p>
                         <MapComponent locations={locations} patients={patients} />
                     </div>

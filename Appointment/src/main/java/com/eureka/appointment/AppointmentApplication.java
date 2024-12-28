@@ -19,7 +19,7 @@ public class AppointmentApplication {
     public static void main(String[] args) {
         SpringApplication.run(AppointmentApplication.class, args);
     }
-
+/*
     @Bean
     CommandLineRunner initData(AppointmentRepository appointmentRepository) {
         return args -> {
@@ -29,7 +29,7 @@ public class AppointmentApplication {
         };
     }
 
-
+*/
 
 
 

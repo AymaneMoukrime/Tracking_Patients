@@ -10,6 +10,8 @@ The system consists of the following microservices:
 - **Doctor Service**: Handles CRUD operations for doctor-related data.
   
 - **Patient Service**: Manages CRUD operations for patient-related data.
+
+- **Appointment Service**: Manage CRUD operations for Appointment-related data.
   
 - **Eureka Server**: Acts as a service registry for microservices.
   
@@ -76,7 +78,8 @@ Here are step-by-step instructions to set up and run this project locally:
 
 - check if the microservices are dispalyed in [http://localhost:8761/](http://localhost:8761/),you need to be able to see something like this :
 
- <img width="1280" alt="image" src="https://github.com/user-attachments/assets/06c76161-ed65-4d64-9bdb-745fca251748" />
+<img width="1267" alt="image" src="https://github.com/user-attachments/assets/f124f5b3-c180-4d24-a1b0-061ebd19486e" />
+
 
 - you will not need any database since the project uses **H2 database** for development.
 
@@ -108,9 +111,19 @@ To simulate you will need a device that sends the location of the patient , but 
 
 - You can also try the other scenario where the patient moves out of his safe zone by running the **Out_zone_Simulation_Gateway.py**.
 
-- You will be able the patient john doe Slowly moving out of his safezone and the moment he moved out you will be alerted.
+- You will be able to see the  patient john doe Slowly moving out of his safezone and the moment he moved out you will be alerted.
 
 - This was possible because of the use of websocket so that each time the location of patient is update it will be checked if his withing the safe range and will be sent through the websocket so that it can be displayed.
 
-## Video Demonstration of the tracking
+- The application also provides CRUD functionality for managing patients, doctors, and appointments.
+
+- This is an earlier version of the application, which will undergo further improvements.
+
+## Video demonstration showcasing the tracking feature and other functionalities
 https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing
+<iframe src="[https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/preview](https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing)" width="640" height="360" allow="autoplay"></iframe>
+
+-For CRUD Operations:
+
+
+

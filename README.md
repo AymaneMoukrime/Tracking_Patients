@@ -120,12 +120,12 @@ To simulate you will need a device that sends the location of the patient , but 
 - This is an earlier version of the application, which will undergo further improvements.
 
 ## Video demonstration showcasing the tracking feature and other functionalities
-https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing
-<iframe ## Video Demonstration
-<iframe src="https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing" width="640" height="360" allow="autoplay"></iframe>
+
+[Watch the Video Demonstration of Tracking](https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing)
+
+[Watch the Video Demonstration of CRUD Operations](https://drive.google.com/file/d/1ZyMUX8lk0IGkCEaKaQHGTSR2gzSBIhy0/view?usp=sharing)
 
 
--For CRUD Operations:
 
 
 
